@@ -1,0 +1,45 @@
+
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+
+import org.aspectj.lang.annotation.After;
+import org.aspectj.lang.annotation.Before;
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Test;
+
+import com.odx.test.controller.PalindromeController;
+
+public class PalindromeTest {
+	PalindromeController palindromeController = new PalindromeController();
+
+	@Before(value = "")
+	public void before() {
+		System.out.println("Before");
+	}
+
+	@After(value = "")
+	public void after() {
+		System.out.println("After");
+	}
+
+	@BeforeAll
+	public static void beforeClass() {
+		System.out.println("Before Class");
+	}
+
+	@AfterAll
+	public static void afterClass() {
+		System.out.println("After Class");
+	}
+
+
+	@Test
+	public void checkPalindrome() {
+		System.out.println("Checkinf for palindrome");
+		assertEquals("alula", palindromeController.longestPalindrome("alula"));
+	}
+
+	
+}

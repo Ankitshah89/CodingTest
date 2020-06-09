@@ -1,0 +1,5 @@
+package com.odx.test.controller;
+
+public class PalindromeController {
+
+}
